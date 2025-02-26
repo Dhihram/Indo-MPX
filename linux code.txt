@@ -1,0 +1,24 @@
+## This is the linux code 
+
+
+# Alignment ASEAN
+mafft  asean_seq_ref.fasta > asean_seq_ref_aligned.fasta
+mafft --auto  asean_seq_ref.fasta > asean_seq_ref_aligned2.fasta
+
+# Add Indonesia
+cat asean_seq_ref_aligned.fasta modified_alignment.fasta > asean_indo.fasta
+
+# 2nd Alignment Indonesia with ASEAN
+mafft  asean_indo.fasta > asean_indo_aligned.fasta
+
+## Tree Inferring with IQTREE
+iqtree -s asean_fix_alignment.fasta -m MFP -bb 1000 
+
+
+## Indo
+
+cat *.fasta > mpox_indo_combined.fasta
+
+mafft  mpox_indo_combined.fasta> mpox_indo_combined_aligned.fasta
+
+iqtree -s mpox_indo_combined_aligned.fasta -m MFP -bb 1000 
