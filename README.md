@@ -5,7 +5,8 @@ This repository contains the code for manuscript titled **[Molecular epidemiolog
 This repo contains:
 * R files
 * Linux codes in .txt files
-* Tempest and Treetime code and results
+* Tempest results
+* Treetime code in Python
 * Markdown files in `docs` folder
 
 The main graph and visualization of the manuscript can be seen [HERE](https://dhihram.github.io/Indo_mpx_manuscript1/)
